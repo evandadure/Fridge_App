@@ -48,9 +48,6 @@
       <div class="row row-offcanvas row-offcanvas-right">
 
         <div class="col-12 col-md-8">
-          <p class="float-right hidden-md-up">
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Show my ingredients</button>
-          </p>
           <div class="jumbotron" style="background-color: #7efff5">
             <h1><?php echo $recipe['recipe_name'];?></h1>
             <p><?php echo $recipe['recipe_description'];?></p>

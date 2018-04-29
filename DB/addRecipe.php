@@ -36,12 +36,12 @@ if(isset($_POST['addIngredients'])) {
 	    $sql = "SELECT max(id) FROM recipe"; //the ID of this new recipe is put in 'idLastRecipe' variable
    		$result = mysqli_query($conn,$sql);
    		$idLastRecipe = mysqli_fetch_all($result,MYSQLI_ASSOC); 
-   		$idLastRecipe = $idLastRecipe[0]["max(id)"];
+   		$idLastRecipe = $idLastRecipe[0]["max(id)"]; //I insert all the ingredients IDs in the table 'involves'
 		foreach ($listFood as $key => $value) {
 			$sql = "INSERT INTO involves (food_id,recipe_id) VALUES ('$value','$idLastRecipe');";
 			mysqli_query($conn,$sql);
 		}
-		header("Location: ../recipe.php?recipe=".$idLastRecipe);
+		header("Location: ../recipe.php?recipe=".$idLastRecipe); //Redirection to the recipe's page directly
 		exit();
 	}
 

@@ -40,8 +40,7 @@ foreach ($allRecipesIngredients as $key => $value) {
 	array_push($currentRecipe, $value["food_id"]);
 }
 if(!empty($currentRecipe))
-	// array_push($listRecipes, $currentRecipe); //TO ADD THE LAST RECIPE IN THE listRecipes ARRAY
-	$listRecipes[$value["recipe_id"]] = $currentRecipe;
+	$listRecipes[$value["recipe_id"]] = $currentRecipe;//TO ADD THE LAST RECIPE IN THE listRecipes ARRAY
 
 //I PUT THE RECIPES THAT I CAN DO WITH MY LIST OF INGREDIENTS IN ANOTHER ARRAY
 $myDoableRecipes = array();
@@ -96,31 +95,18 @@ if (isset($_POST['findByIngredientsPage'])) { //if the user is coming from the p
 			}
 		}	
 	}
-	if($is_using_ingredients == "on"){
+	if($is_using_ingredients == "on"){ //selection of only the recipes that contain the ingredients of the current user
 		foreach ($recipesToShow as $key => $value) {
 			if(in_array($value["id"], $myDoableRecipes))
 				array_push($_SESSION["recipesToShow"], $value);
 		}
-	}else{
+	}else{ 
 		$_SESSION["recipesToShow"] = $recipesToShow;
 	}
 
 
     header("Location: ../find_recipe.php");
     exit(); 
-
-// print_r($_SESSION["recipesToShow"]);
-
-// var_dump($searched_name_recipe);
-// var_dump($searched_type_recipe);
-// var_dump($searched_time_recipe);
-// var_dump($is_using_ingredients);
-
-
-
-
-
-
 
 }else{
 	header("Location: ../404.php");

@@ -9,9 +9,6 @@
       <div class="row row-offcanvas row-offcanvas-right">
 
         <div class="col-12 col-md-8">
-          <p class="float-right hidden-md-up">
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Show my ingredients</button>
-          </p>
           <div class="jumbotron" style="background-color: #74b9ff">
             <h3>Not the courage to go down to the local grocery store buy frozen food?</h3>
             <h3>Lack of inspiration to cook a small dish with the remains of the refrigerator?</h3>
