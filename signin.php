@@ -7,14 +7,9 @@
           }
           elseif ($_GET['login'] == 'empty') {
               $emptySigninInfos = true;
-              // echo "Please fill all the fields";
           }
           elseif ($_GET['login'] == 'errorauth') {
-              // echo "invalid username or password";
               $badSigninInfos = true;
-              // if( isset($_GET['id']) && $_GET['id']=="a"){
-              //   echo "<br> get ok";
-              // }
           }else{
             header("Location: 404.php");
             exit(); 
@@ -23,19 +18,10 @@
       if (isset($_GET['signup'])) {
           if ($_GET['signup'] == 'empty') {
               $emptySignupInfos = true;
-              // echo "Please fill all the fields";
           }elseif ($_GET['signup'] == 'invalidinput') {
-              // echo "invalid username or password";
               $badSignupInfos = true;
-              // if( isset($_GET['id']) && $_GET['id']=="a"){
-              //   echo "<br> get ok";
-              // }
           }elseif ($_GET['signup'] == 'usertaken') {
-              // echo "invalid username or password";
               $userTaken = true;
-              // if( isset($_GET['id']) && $_GET['id']=="a"){
-              //   echo "<br> get ok";
-              // }
           }else{
             header("Location: 404.php");
             exit(); 
@@ -51,14 +37,6 @@
 <div class="container">
   <div class="row">
   	<div class="col-md-6">
-
-
-
-<!-- <form action="includes/login.php" method ="POST">
-  <input type="text" name="uid" placeholder="User ID">
-  <input type="password" name="pwd" placeholder="password">
-  <button type="submit" name="submit">submit</button>
-</form> -->
 
 
 <div class="main-login main-center">
@@ -101,14 +79,6 @@ if (isset($badSigninInfos))
   </div>
 
   <div class="col-6">
-
-
-
-<!-- <form action="includes/login.php" method ="POST">
-  <input type="text" name="uid" placeholder="User ID">
-  <input type="password" name="pwd" placeholder="password">
-  <button type="submit" name="submit">submit</button>
-</form> -->
 
 
 <div class="main-login main-center">

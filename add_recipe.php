@@ -5,10 +5,10 @@
   {
     header("Location: signin.php");
     exit();
-  }else{
+  }else{ //this code is useful to fill the ingredients list for each food category.
     $sql = "SELECT * FROM food ORDER BY food_type,food_name";
     $result = mysqli_query($conn,$sql);
-    $allFood = mysqli_fetch_all($result,MYSQLI_ASSOC);
+    $allFood = mysqli_fetch_all($result,MYSQLI_ASSOC); //get all the ingredients from the DB
     $food = array();
     $i = -1;
     $foodType = "";
@@ -38,6 +38,8 @@
 			echo '<label style="color:green">Your recipe is now part of Fridgee !</label>';
 	}
 ?>
+
+<!-- FORM TO ADD A RECIPE WITH ERROR HANDLING IN PHP -->
 <form action="DB/addRecipe.php" method ="POST">
   <div class="form-group">
     <label for="inputNameRecipe">Name of your recipe</label>
@@ -105,6 +107,7 @@
    </div>
           <div class="row">
 
+<!-- LIST OF INGREDIENTS BY CATEGORY -->
           
 <!-- Essentials -->
               <div class="col-12 col-lg-6 btnFood">

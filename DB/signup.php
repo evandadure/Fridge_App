@@ -23,18 +23,11 @@ if(isset($_POST['submitSignup'])) {
 			$result = mysqli_query($conn,$sql);
 			$resultCheck = mysqli_num_rows($result);
 
-			if($resultCheck > 0){
+			if($resultCheck > 0){ //if the username already exists, resultCheck should contain something !
 				header("Location: ../signin.php?signup=usertaken");
 				exit();
 			}else{
-				$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-				//Insert user Db
-				// $sql= "SELECT * FROM `user` ORDER BY `user`.`id` DESC LIMIT 1";
-				// $result = mysqli_query($conn,$sql);
-				// $rows = mysqli_fetch_assoc($result);
-				// var_dump($rows);
-				// $id = $rows["id"];
-				// $id++;
+				$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT); //hashing
 				$sql = "INSERT INTO user (user_identifier,user_password,user_name) VALUES ('$uid','$hashedPwd','$username');";
 				mysqli_query($conn,$sql);
 				$sql = "SELECT id FROM `user` WHERE `user_identifier` = '".$uid."'";

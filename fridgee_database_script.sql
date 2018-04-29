@@ -7,6 +7,8 @@
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
+CREATE DATABASE fridgee_db;
+USE fridgee_db;
 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
