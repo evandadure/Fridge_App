@@ -20,8 +20,6 @@ For a demo you can check the wiki of the project !
 * **Evan Dadure** - (https://github.com/evandadure)
 * **Pierre Cochet** - (https://github.com/pierrecochet)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
