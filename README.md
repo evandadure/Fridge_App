@@ -1,6 +1,9 @@
 # Fridgee
 
-The application fridgee has finally arrived! You will not be out of ideas in front of your fridge, fridgee is there for you. This tablet/mobile app gives you meal ideas based on the foods in your fridge ! 
+## Lack of inspiration to cook a small dish with the remains of the refrigerator?
+
+Fridgee App will allow you to find in 3 clicks a cooking recipe with the remains of your fridge or your dusty closets. Sign in or sign up and enjoy our tools !
+
 
 ## Getting Started
 
