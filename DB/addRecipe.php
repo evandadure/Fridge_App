@@ -41,7 +41,7 @@ if(isset($_POST['addIngredients'])) {
 			$sql = "INSERT INTO involves (food_id,recipe_id) VALUES ('$value','$idLastRecipe');";
 			mysqli_query($conn,$sql);
 		}
-		header("Location: ../add_recipe.php?result=success");
+		header("Location: ../recipe.php?recipe=".$idLastRecipe);
 		exit();
 	}
 
